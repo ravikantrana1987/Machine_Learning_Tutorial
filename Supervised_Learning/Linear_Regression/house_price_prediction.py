@@ -71,6 +71,9 @@ model = LinearRegression()
 model.fit(X,y) # ← This is where gradient descent happens internally!
 
 # Checked what we have learned
+# If Coefficients are in negative means, if we increase the feature magnitute by 1,
+# it will decrease the predicted value by (coefficient * 1)
+# Example if coef is -1.2, then the house size increased by 1sqft then its value will be decreased by $-1.2
 print(f"Slope (a) : {model.coef_[0]:.2f}")
 print(f"intersept (b) : {model.intercept_:.2f}")
 print(f"Model Score : {model.score(X,y)}")
